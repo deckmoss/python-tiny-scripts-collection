@@ -13,10 +13,10 @@ PI = math.pi
 ## The dictionary 'job' contains the user input() dialog string as well as nested formula strings
 job = {'input' : "First insert 'radius', 'area' oder 'perimeter' as given value-type and confirm by pressing Enter..."
                  +"Second insert the associated numbers. Floating point or integer are allowed:",
-       'formula': {
-                                           # Nested values will later be used as math formula in eval()
-                                           # Each key represents the source variable which is given by the user input
-                                           # Each value contains the needed formulas for deriving the two unknowns
+       'formula': { # Nested dictionaries:
+                    # Each key represents the source variable which is given by the user input
+                                           #    values will be processed iteratively like math formulas in eval()
+                                           #    Each value contains the needed formulas for deriving two unknowns
                     'radius':   {'radius' :"zahl",
                                 'perimeter' : "2* PI * zahl",
                                 'area': "PI * zahl**2"
